@@ -4,7 +4,7 @@
     <title> <%=@page_title%></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -12,11 +12,6 @@
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
    
-   <div>
-     <div> <%= link_to "Home", root_path %></div>
-     <div> <%= link_to "About Me", about_path %></div>
-     <div> <%= link_to "Contact Us",contact_path %></div>
-   </div>
    
    <% if current_user.is_a?(User) %>
      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
@@ -25,6 +20,13 @@
      <%= link_to "Register", new_user_registration_path%>
    <% end %>
     <%= yield %>
+   
+   <div>
+     <div> <%= link_to "Home", root_path %></div>
+     <div> <%= link_to "About Me", about_path %></div>
+     <div> <%= link_to "Contact Us",contact_path %></div>
+   </div>
+  
     
     <% if session[:source] %>
     <p>Thanks for visiting me from <%= session[:source] %></p>
