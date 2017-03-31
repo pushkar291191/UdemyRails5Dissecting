@@ -57,3 +57,5 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'hirb', '0.7.3'
 
 gem 'devise', '~> 4.2'
+
+gem 'bootstrap', '~> 4.0.0.alpha6'
