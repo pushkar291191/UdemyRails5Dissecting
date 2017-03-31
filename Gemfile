@@ -59,3 +59,5 @@ gem 'hirb', '0.7.3'
 gem 'devise', '~> 4.2'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'petergate', '~> 1.7'
