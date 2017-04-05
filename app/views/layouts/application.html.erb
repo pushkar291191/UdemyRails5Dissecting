@@ -21,14 +21,9 @@
         <div class="cover-container">
    
             <%= render "shared/application_nav",location: 'top' %>
-            
-            <%= login_helper %>
             <%= yield %>
-            <%= @copyright %>
-            
-            <% if session[:source] %>
-            <p>Thanks for visiting me from <%= session[:source] %></p>
-            <% end %>
+           
+            <%= source_helper("application") %>
     
         </div>
 
